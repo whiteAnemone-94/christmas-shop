@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Montserrat";
+  /* src: url('Montserrat.eot'); */
+  src: local("Montserrat"),
+    url("../assets/fonts/Montserrat-Regular.woff") format("woff"),
+    url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  /* src: url('Montserrat.eot'); */
+  src: local("Montserrat"),
+    url("../assets/fonts/Montserrat-SemiBold.woff") format("woff"),
+    url("../assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Allura";
+  /* src: url('Allura.eot'); */
+  src: local("Allura"),
+    url("../assets/fonts/Allura-Regular.ttf.woff") format("woff"),
+    url("../assets/fonts/Allura-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  /* outline: 1px solid red; */
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+
+main {
+  background-color: #FF4646;
+  border-radius: 20px;
+}
+
+.container {
+  padding: 0 82px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-family: "Allura";
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: 36.48px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
