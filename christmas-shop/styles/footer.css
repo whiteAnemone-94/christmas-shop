@@ -1,0 +1,107 @@
+.footer-section {
+  padding: 60px 0;
+}
+
+.contacts-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 12px;
+  list-style-type: none;
+  margin-bottom: 68px;
+}
+
+.contacts-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  align-items: center;
+  height: 204px;
+  padding: 20px;
+  background-color: #ECF3F8;
+  border-radius: 20px;
+}
+
+.contacts-item:hover {
+  cursor: pointer;
+}
+
+.contacts-item:hover .contact-phone, .contacts-item:hover .contact-address, .contacts-item:hover .contact-email {
+  color: #FF4646;
+}
+
+.contacts-item:hover .contact-text {
+  color: #FF4646;
+}
+
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.contact-phone, .contact-address, .contact-email {
+  font-size: 24px;
+  color: #181C29;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.contact-phone::after, .contact-address::after, .contact-email::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-text {
+  font-size: 16px;
+  color: #181C29;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.socials-list {
+  display: flex;
+  column-gap: 28px;
+  justify-content: center;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.socials-link:hover {
+  cursor: pointer;
+}
+
+.socials-link:hover svg {
+  transform: scale(1.2);
+}
+
+.socials-link:hover svg path {
+  stroke: #FF4646;
+}
+
+.copyright {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.made-in-link {
+  display: block;
+  font-family: "Allura";
+  font-size: 24px;
+  color: #181C29;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.made-in-link:hover {
+  color: #FF4646;
+}
