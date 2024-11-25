@@ -22,19 +22,6 @@
   border-radius: 20px;
 }
 
-.contacts-item:hover {
-  cursor: pointer;
-}
-
-.contacts-item:hover .contact-phone, .contacts-item:hover .contact-address, .contacts-item:hover .contact-email {
-  color: #FF4646;
-}
-
-.contacts-item:hover .contact-text {
-  color: #FF4646;
-}
-
-
 .contact-icon {
   width: 80px;
   height: 80px;
@@ -72,18 +59,6 @@
   margin-bottom: 20px;
 }
 
-.socials-link:hover {
-  cursor: pointer;
-}
-
-.socials-link:hover svg {
-  transform: scale(1.2);
-}
-
-.socials-link:hover svg path {
-  stroke: #FF4646;
-}
-
 .copyright {
   font-size: 16px;
   font-weight: 400;
@@ -100,8 +75,4 @@
   text-align: center;
   text-decoration: none;
   margin: 0 auto;
-}
-
-.made-in-link:hover {
-  color: #FF4646;
 }

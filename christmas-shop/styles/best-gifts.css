@@ -34,14 +34,6 @@
   border-radius: 20px;
 }
 
-.best-gifts-item:hover {
-  cursor: pointer;
-}
-
-.best-gifts-item:hover .gift-name {
-  color: #FF4646;
-}
-
 .gift-description {
   height: 112px;
   background-color: #FFFFFF;

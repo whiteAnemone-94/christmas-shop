@@ -49,11 +49,6 @@
   pointer-events: none;
 }
 
-.gift-purpose-item:hover button {
-  cursor: pointer;
-  background-color: #FFFFFF33;
-}
-
 .gifts-list {
   display: flex;
   flex-wrap: wrap;
@@ -68,14 +63,6 @@
   height: 342px;
   background-color: #ECF3F8;
   border-radius: 20px;
-}
-
-.gifts-item:hover {
-  cursor: pointer;
-}
-
-.gifts-item:hover .gift-name {
-  color: #FF4646;
 }
 
 .gift-description {

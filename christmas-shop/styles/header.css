@@ -17,10 +17,6 @@
   text-transform: uppercase;
 }
 
-.logo:hover {
-  cursor: pointer;
-}
-
 .nav__button {
   display: none;
   flex-direction: column;
@@ -62,10 +58,4 @@
   color: #FF4646;
   background-color: #FF46461A;
   pointer-events: none;
-}
-
-.nav__list-link:hover {
-  cursor: pointer;
-  color: #FF4646;
-  background-color: #FF46461A;
 }

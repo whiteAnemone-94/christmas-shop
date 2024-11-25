@@ -43,10 +43,3 @@
   border: 1px solid #181C29;
   border-radius: 20px;
 }
-
-.gifts-link:hover {
-  cursor: pointer;
-  color: #181C29;
-  background-color: #FFFFFF;
-  border-color: #FFFFFF;
-}

@@ -1,3 +1,18 @@
+@media (hover:hover) {
+  .gift-purpose-item:hover button {
+    cursor: pointer;
+    background-color: #FFFFFF33;
+  }
+
+  .gifts-item:hover {
+    cursor: pointer;
+  }
+
+  .gifts-item:hover .gift-name {
+    color: #FF4646;
+  }
+}
+
 @media (max-width: 630px) {
   .gift-purpose-list {
     column-gap: 0px;
