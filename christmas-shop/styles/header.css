@@ -69,13 +69,3 @@
   color: #FF4646;
   background-color: #FF46461A;
 }
-
-@media (max-width: 768px) {
-  .nav__list {
-    display: none;
-  }
-
-  .nav__button {
-    display: flex;
-  }
-}

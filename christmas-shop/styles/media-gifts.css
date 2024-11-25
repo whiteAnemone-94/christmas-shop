@@ -1,0 +1,9 @@
+@media (max-width: 630px) {
+  .gift-purpose-list {
+    column-gap: 0px;
+  }
+
+  .gift-purpose-item button {
+    padding: 12px 8px;
+  }
+}
