@@ -55,3 +55,16 @@
     width: 85%;
   }
 }
+
+@media (max-width: 630px) {
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 528px;
+    align-items: start;
+  }
+
+  .about-description {
+    width: 100%;
+    padding: 60px 20px;
+}
+}

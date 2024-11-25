@@ -10,7 +10,7 @@
 }
 
 .gifts-title {
-  width: 426px;
+  max-width: 426px;
   color: #FFFFFF;
   letter-spacing: 0.18em;
   line-height: 48px;
@@ -112,4 +112,14 @@
   letter-spacing: 0.08em;
   line-height: 24px;
   text-transform: uppercase;
+}
+
+@media (max-width: 630px) {
+  .gift-purpose-list {
+    column-gap: 0px;
+  }
+
+  .gift-purpose-item button {
+    padding: 12px 8px;
+  }
 }
