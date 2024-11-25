@@ -1,0 +1,118 @@
+@media (hover:hover) {
+  .logo:hover {
+    cursor: pointer;
+  }
+
+  .nav__list-link:hover {
+    cursor: pointer;
+    color: #FF4646;
+    background-color: #FF46461A;
+  }
+
+  .gifts-link:hover {
+    cursor: pointer;
+    color: #181C29;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+  }
+
+  .best-gifts-item:hover {
+    cursor: pointer;
+  }
+
+  .best-gifts-item:hover .gift-name {
+    color: #FF4646;
+  }
+
+  .slider-button:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+  }
+
+  .slider-button:hover svg path {
+    stroke: #FF4646;
+  }
+
+  .contacts-item:hover {
+    cursor: pointer;
+  }
+
+  .contacts-item:hover .contact-phone,
+  .contacts-item:hover .contact-address,
+  .contacts-item:hover .contact-email {
+    color: #FF4646;
+  }
+
+  .contacts-item:hover .contact-text {
+    color: #FF4646;
+  }
+
+  .socials-link:hover {
+    cursor: pointer;
+  }
+
+  .socials-link:hover svg {
+    transform: scale(1.2);
+  }
+
+  .socials-link:hover svg path {
+    stroke: #FF4646;
+  }
+
+  .made-in-link:hover {
+    color: #FF4646;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 35px;
+  }
+
+  .about-description {
+    width: 85%;
+  }
+
+  .contacts-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 12px;
+  }
+
+  .contacts-item:last-child {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 8px;
+  }
+
+  .nav__list {
+    display: none;
+  }
+
+  .nav__button {
+    display: flex;
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 630px) {
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 528px;
+    align-items: start;
+  }
+
+  .about-description {
+    width: 100%;
+    padding: 60px 20px;
+  }
+}

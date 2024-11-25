@@ -6,7 +6,7 @@
 }
 
 .timer {
-  width: 426px;
+  max-width: 426px;
   margin: 0 auto;
   padding: 120px 0;
   display: flex;
