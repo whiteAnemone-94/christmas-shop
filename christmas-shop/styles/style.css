@@ -82,3 +82,15 @@ main {
 .visually-hidden {
   visibility: hidden;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 8px;
+  }
+}
