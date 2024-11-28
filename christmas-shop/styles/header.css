@@ -17,7 +17,7 @@
   text-transform: uppercase;
 }
 
-.nav__button {
+.burger-button {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -29,7 +29,7 @@
   border: none;
 }
 
-.nav__button span {
+.burger-button span {
   width: 20px;
   height: 1px;
   background-color: #181C29;
@@ -58,4 +58,19 @@
   color: #FF4646;
   background-color: #FF46461A;
   pointer-events: none;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.overlay_is-active {
+  display: block;
+  background-color: #181C29CC;
 }

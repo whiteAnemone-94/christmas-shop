@@ -73,12 +73,3 @@ button:disabled {
 button:disabled svg path {
   stroke: #FFFFFF66;
 }
-
-.slider-button:hover {
-  cursor: pointer;
-  background-color: #FFFFFF;
-}
-
-.slider-button:hover svg path {
-  stroke: #FF4646;
-}

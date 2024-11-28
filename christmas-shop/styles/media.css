@@ -90,12 +90,52 @@
     padding: 0 8px;
   }
 
-  .nav__list {
-    display: none;
+  .header-section {
+    position: relative;
+    /* overflow: hidden; */
   }
 
-  .nav__button {
+  .nav {
+    position: fixed;
+    top: 64px;
+    right: -100%;
+    width: 100%;
+    height: 960px;
+    margin: 0 auto;
+    z-index: 10;
+  }
+
+  .nav__list {
+    /* display: none; */
+    /* right: -100%; */
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+  }
+
+  .nav__list-link {
+    font-size: 24px;
+    letter-spacing: 0.16em;
+  }
+
+  .nav__is-visible {
+    right: 0;
+  }
+
+  .burger-button {
     display: flex;
+  }
+
+  .burger-button_x span:first-child {
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(0px, -4px);
+  }
+
+  .burger-button_x span:last-child {
+    transform-origin: 0 0;
+    transform: rotate(-45deg) translate(0px, 3px);
   }
 
   .contacts-list {
