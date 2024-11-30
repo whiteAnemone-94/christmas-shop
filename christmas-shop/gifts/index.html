@@ -14,12 +14,13 @@
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="../styles/media.css">
   <link rel="stylesheet" href="../styles/media-gifts.css">
-  <script src="../script.js" defer></script>
+  <script src="../burger.js" defer></script>
+  <script src="../scroll-to-top.js" defer></script>
   <title>Christmas Shop - Gifts</title>
 </head>
 
 <body>
-  <header class="header-section">
+  <header class="header-section" id="scroll-to-top">
     <div class="container">
       <div class="header">
         <a href="../index.html" class="logo">
@@ -47,7 +48,6 @@
     </div>
   </header>
   <main>
-
     <section class="section gifts-section">
       <div class="container">
         <div class="gifts">
@@ -155,7 +155,6 @@
         </div>
       </div>
     </section>
-
   </main>
   <footer class="footer-section" id="contacts">
     <div class="container">
@@ -225,6 +224,12 @@
       </div>
     </div>
   </footer>
+  <button class="scroll-to-top-btn">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="#FF4646" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
 </body>
 
 </html>
