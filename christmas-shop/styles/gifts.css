@@ -100,3 +100,19 @@
   line-height: 24px;
   text-transform: uppercase;
 }
+
+.scroll-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #FF4646;
+  border-radius: 100px;
+  transform: rotate(-90deg);
+  z-index: 100;
+}

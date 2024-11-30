@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="styles/timer.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/media.css">
+  <script src="burger.js" defer></script>
+  <script src="slider.js" defer></script>
   <title>Christmas Shop</title>
 </head>
 
@@ -33,10 +35,6 @@
           <span>the gifts</span>
         </a>
         <nav class="nav">
-          <button class="nav__button">
-            <span class="nav__button-line"></span>
-            <span class="nav__button-line"></span>
-          </button>
           <ul class="nav__list">
             <li class="nav__list-item"><a href="gifts/index.html" class="nav__list-link">gifts</a></li>
             <li class="nav__list-item"><a href="#about" class="nav__list-link">about</a></li>
@@ -44,6 +42,11 @@
             <li class="nav__list-item"><a href="#contacts" class="nav__list-link">contacts</a></li>
           </ul>
         </nav>
+        <div class="overlay"></div>
+        <button class="burger-button">
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
@@ -102,7 +105,7 @@
           </ul>
           <ul class="slider-pagination">
             <li class="slider-pagination-item">
-              <button class="slider-button" disabled>
+              <button class="slider-button slider-button_prev button_disabled" disabled>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="white" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -110,7 +113,7 @@
               </button>
             </li>
             <li class="slider-pagination-item">
-              <button class="slider-button">
+              <button class="slider-button slider-button_next">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="white" stroke-linecap="round"
                     stroke-linejoin="round" />
