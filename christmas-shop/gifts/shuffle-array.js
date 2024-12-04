@@ -459,7 +459,7 @@ for (let i = 0; i < giftsObj.length; i++) {
 let giftsList = document.querySelector('.gifts-list');
 giftsList.innerHTML = '';
 
-function addGiftCard() {
+function addGiftCard(obj) {
   let randomIndexList = [];
   let randomIndex;
 
@@ -470,7 +470,22 @@ function addGiftCard() {
       continue
     }
     randomIndexList.push(randomIndex);
-    createGiftCard(giftsObj[randomIndex]);
+    createGiftCard(obj[randomIndex]);
+  }
+}
+
+function addGiftPurposeCard(obj) {
+  let randomIndexList = [];
+  let randomIndex;
+
+  for (let i = 0; i < 12; i++) {
+    randomIndex = Math.floor(Math.random() * (12 - 1)) + 1;
+    if (randomIndex in randomIndexList) {
+      i--;
+      continue
+    }
+    randomIndexList.push(randomIndex);
+    createGiftCard(obj[randomIndex]);
   }
 }
 
@@ -525,4 +540,33 @@ function createGiftDescription(name, category) {
   return giftDescription
 }
 
-addGiftCard();
+addGiftCard(giftsObj);
+
+let purposeButtons = document.querySelectorAll('.gift-purpose-button');
+
+purposeButtons.forEach(item => {
+  item.addEventListener('click', () => {
+    purposeButtons.forEach(item => {
+      item.classList.remove('gift-purpose-button_is-active');
+      item.disabled = false;
+    })
+    giftsList.innerHTML = '';
+    if (item.id == 'all-gifts') {
+      item.classList.add('gift-purpose-button_is-active');
+      item.disabled = true;
+      addGiftCard(giftsObj);
+    } else if (item.id == 'for-work') {
+      item.classList.add('gift-purpose-button_is-active');
+      item.disabled = true;
+      addGiftPurposeCard(giftsForWork);
+    } else if (item.id == 'for-health') {
+      item.classList.add('gift-purpose-button_is-active');
+      item.disabled = true;
+      addGiftPurposeCard(giftsForHealth);
+    } else if (item.id == 'for-harmony') {
+      item.classList.add('gift-purpose-button_is-active');
+      item.disabled = true;
+      addGiftPurposeCard(giftsForHarmony);
+    }
+  })
+});

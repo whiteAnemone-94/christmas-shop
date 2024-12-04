@@ -33,7 +33,7 @@
   margin-bottom: 22px;
 }
 
-.gift-purpose-item button {
+.gift-purpose-button {
   font-size: 12px;
   color: #FFFFFF;
   letter-spacing: 0.05em;
@@ -44,7 +44,7 @@
   text-transform: uppercase;
 }
 
-.gift-purpose-item_active button {
+.gift-purpose-button_is-active {
   background-color: #FFFFFF33;
   pointer-events: none;
 }
