@@ -8,14 +8,14 @@ window.addEventListener('resize', () => {
   }
 })
 
-
 let scrollToTopBtn = document.querySelector(".scroll-to-top-btn");
 
 function handleScroll() {
-  let scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  let GOLDEN_RATIO = 0.1;
+  // let scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  // let GOLDEN_RATIO = 0.1;
 
-  if ((document.documentElement.scrollTop / scrollableHeight) > GOLDEN_RATIO) {
+  // if ((document.documentElement.scrollTop / scrollableHeight) > GOLDEN_RATIO) {
+  if (window.pageYOffset > 300) {
     //show button
     scrollToTopBtn.style.display = "flex";
   } else {
