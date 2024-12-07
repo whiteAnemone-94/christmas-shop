@@ -434,79 +434,137 @@ const giftsObj = [
 
 //  ---------------------------------------  //
 
-function shuffleArray() {
-  return giftsObj.sort(() => Math.random() - 0.5);
-}
+// function shuffleArray() {
+//   return giftsObj.sort(() => Math.random() - 0.5);
+// }
 
 //  ---------------------------------------  //
 
-let giftsList = document.querySelector('.best-gifts-list');
-giftsList.innerHTML = '';
+// let giftsList = document.querySelector('.best-gifts-list');
+let giftCards = document.querySelectorAll('.best-gifts-item');
+// giftsList.innerHTML = '';
 
-function addGiftCard() {
-  let randomIndexList = [];
+function getRandomNumber() {
+  return Math.floor(Math.random() * (36 - 1)) + 1;
+}
+
+function shuffleArray() {
   let randomIndex;
+  let randomIndexList = [];
 
   for (let i = 0; i < 4; i++) {
-    randomIndex = Math.floor(Math.random() * (36 - 1)) + 1;
+    randomIndex = getRandomNumber();
     if (randomIndex in randomIndexList) {
       i--;
-      continue
+      continue;
     }
-    randomIndexList.push(randomIndex);
-    createGiftCard(giftsObj[randomIndex]);
+    changeImage(i, giftsObj[randomIndex]);
+    console.log(i, giftsObj[randomIndex]);
+    changeDescription(i, giftsObj[randomIndex]);
+    console.log(i, giftsObj[randomIndex]);
   }
 }
 
-function createGiftCard(giftObj) {
-  let gift = document.createElement('li');
-  gift.className = 'best-gifts-item';
-
-  giftsList.append(gift);
-  gift.append(createGiftImage(giftObj['category']))
-  gift.append(createGiftDescription(giftObj['name'], giftObj['category']));
-}
-
-function createGiftImage(category) {
-  let giftImage = document.createElement('img');
-  giftImage.width = "310";
-  giftImage.height = "225";
-  if (category == "For Harmony") {
+function changeImage(index, arr) {
+  console.log('img', index, arr);
+  let giftImage = giftCards[index].querySelector('img');
+  if (arr['category'] == "For Harmony") {
     giftImage.src = 'assets/img/gift-for-harmony.png';
-    giftImage.classList.add('gift-for-harmony');
-  } else if (category == "For Health") {
+  } else if (arr['category'] == "For Health") {
     giftImage.src = 'assets/img/gift-for-health.png';
-    giftImage.classList.add('gift-for-health');
-  } else if (category == "For Work") {
+  } else if (arr['category'] == "For Work") {
     giftImage.src = 'assets/img/gift-for-work.png';
-    giftImage.classList.add('gift-for-work');
   }
-  return giftImage
 }
 
-function createGiftDescription(name, category) {
-  let giftDescription = document.createElement('div');
-  giftDescription.className = 'gift-description';
+// Поправить: заметен переход цвета в категории
+function changeDescription(index, arr) {
+  console.log('desc', index, arr);
+  let giftPurpose = giftCards[index].querySelector('.gift-purpose');
+  let giftName = giftCards[index].querySelector('.gift-name');
 
-  let giftPurpose = document.createElement('span');
-  giftPurpose.className = 'gift-purpose';
-  if (category == "For Harmony") {
+  giftPurpose.classList.remove('gift-for-health');
+  giftPurpose.classList.remove('gift-for-work');
+  giftPurpose.classList.remove('gift-for-harmony');
+
+  if (arr['category'] == "For Harmony") {
     giftPurpose.classList.add('gift-for-harmony');
-  } else if (category == "For Health") {
+  } else if (arr['category'] == "For Health") {
     giftPurpose.classList.add('gift-for-health');
-  } else if (category == "For Work") {
+  } else if (arr['category'] == "For Work") {
     giftPurpose.classList.add('gift-for-work');
   }
-  giftPurpose.innerHTML = category;
 
-  let giftName = document.createElement('h3');
-  giftName.className = 'gift-name';
-  giftName.innerHTML = name;
-
-  giftDescription.append(giftPurpose);
-  giftDescription.append(giftName);
-
-  return giftDescription
+  giftPurpose.innerHTML = arr['category'];
+  giftName.innerHTML = arr['name'];
 }
 
-addGiftCard();
+shuffleArray()
+
+// function addGiftCard() {
+//   let randomIndexList = [];
+//   let randomIndex;
+
+//   for (let i = 0; i < 4; i++) {
+//     randomIndex = Math.floor(Math.random() * (36 - 1)) + 1;
+//     if (randomIndex in randomIndexList) {
+//       i--;
+//       continue
+//     }
+//     randomIndexList.push(randomIndex);
+//     createGiftCard(giftsObj[randomIndex]);
+//   }
+// }
+
+// function createGiftCard(giftObj) {
+//   let gift = document.createElement('li');
+//   gift.className = 'best-gifts-item';
+
+//   giftsList.append(gift);
+//   gift.append(createGiftImage(giftObj['category']))
+//   gift.append(createGiftDescription(giftObj['name'], giftObj['category']));
+// }
+
+// function createGiftImage(category) {
+//   let giftImage = document.createElement('img');
+//   giftImage.width = "310";
+//   giftImage.height = "225";
+//   if (category == "For Harmony") {
+//     giftImage.src = 'assets/img/gift-for-harmony.png';
+//     giftImage.classList.add('gift-for-harmony');
+//   } else if (category == "For Health") {
+//     giftImage.src = 'assets/img/gift-for-health.png';
+//     giftImage.classList.add('gift-for-health');
+//   } else if (category == "For Work") {
+//     giftImage.src = 'assets/img/gift-for-work.png';
+//     giftImage.classList.add('gift-for-work');
+//   }
+//   return giftImage
+// }
+
+// function createGiftDescription(name, category) {
+//   let giftDescription = document.createElement('div');
+//   giftDescription.className = 'gift-description';
+
+//   let giftPurpose = document.createElement('span');
+//   giftPurpose.className = 'gift-purpose';
+//   if (category == "For Harmony") {
+//     giftPurpose.classList.add('gift-for-harmony');
+//   } else if (category == "For Health") {
+//     giftPurpose.classList.add('gift-for-health');
+//   } else if (category == "For Work") {
+//     giftPurpose.classList.add('gift-for-work');
+//   }
+//   giftPurpose.innerHTML = category;
+
+//   let giftName = document.createElement('h3');
+//   giftName.className = 'gift-name';
+//   giftName.innerHTML = name;
+
+//   giftDescription.append(giftPurpose);
+//   giftDescription.append(giftName);
+
+//   return giftDescription
+// }
+
+// addGiftCard();
